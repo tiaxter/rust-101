@@ -1,6 +1,9 @@
+use rand::Rng;
+
 fn main() {
     // io_example();
-    string_to_number_parse();
+    // string_to_number_parse();
+    generate_random_number();
 }
 
 fn io_example() {
@@ -23,4 +26,13 @@ fn string_to_number_parse() {
     let number: u32 = number.parse().expect("String was not a number");
     // Print the converted variable
     println!("{}", number);
+}
+
+fn generate_random_number() {
+    // Decide the range where the generated number will be between
+    let range = 1..=1412; // Here we say that the range starts from 1 to 1412 included
+                          // Generate the number
+    let random_number = rand::thread_rng().gen_range(range);
+    // Print the random number
+    println!("The random number is {}", random_number);
 }
