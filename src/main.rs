@@ -3,7 +3,8 @@ use rand::Rng;
 fn main() {
     // io_example();
     // string_to_number_parse();
-    generate_random_number();
+    // generate_random_number();
+    conditional_block();
 }
 
 fn io_example() {
@@ -35,4 +36,22 @@ fn generate_random_number() {
     let random_number = rand::thread_rng().gen_range(range);
     // Print the random number
     println!("The random number is {}", random_number);
+}
+
+fn conditional_block() {
+    let user_age = 18;
+    let age_to_vote = 18;
+
+    println!("The user is {} years old", user_age);
+
+    if user_age >= age_to_vote {
+        println!("The user can vote!");
+    } else {
+        println!("The user cannot vote!");
+    }
+
+    // Ternary example
+    let can_user_vote = if user_age >= age_to_vote { true } else { false };
+
+    println!("Can user vote? {}", can_user_vote);
 }
