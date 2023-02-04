@@ -1,5 +1,6 @@
 fn main() {
-    io_example();
+    // io_example();
+    string_to_number_parse();
 }
 
 fn io_example() {
@@ -13,4 +14,13 @@ fn io_example() {
         .expect("String has not been inserted");
     // Print the given string
     println!("Hello {}", name);
+}
+
+fn string_to_number_parse() {
+    // Variable shadowing in Rust is permitted. In fact here there are two variable with the same name
+    // but with different types.
+    let number = "1412";
+    let number: u32 = number.parse().expect("String was not a number");
+    // Print the converted variable
+    println!("{}", number);
 }
