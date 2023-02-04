@@ -3,7 +3,7 @@ fn main() {
 }
 
 fn io_example() {
-    // Ask to uer to type something
+    // Ask to user to type something
     println!("Type your name: ");
     // Create new mutable variable
     let mut name = String::new();
